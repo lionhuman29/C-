@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ Mastery — Learn C++ from Basics to Advanced</title>
+  <meta name="description" content="Master C++ programming from scratch to advanced concepts. Interactive lessons, real code examples, quizzes, and projects — all free." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════ NAV ═══ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text">C++<span class="logo-accent">Mastery</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#curriculum" class="nav-link">Curriculum</a></li>
+      <li><a href="#lessons" class="nav-link">Lessons</a></li>
+      <li><a href="#playground" class="nav-link">Playground</a></li>
+      <li><a href="#resources" class="nav-link">Resources</a></li>
+      <li><a href="#lessons" class="nav-cta">Start Learning</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════ HERO ═══ -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="grid-overlay"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="particles" id="particles"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Free &amp; Open — No signup needed
+    </div>
+    <h1 class="hero-title">
+      Master <span class="gradient-text">C++</span><br/>
+      From Zero to<br/>
+      <span class="typewriter-wrap"><span class="typewriter" id="typewriter"></span></span>
+    </h1>
+    <p class="hero-sub">
+      The most comprehensive C++ curriculum on the web. 200+ interactive lessons,
+      live code sandbox, quizzes, and real-world projects — completely free.
+    </p>
+    <div class="hero-actions">
+      <a href="#lessons" class="btn-primary" id="startBtn">
+        <span>Start Learning</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#curriculum" class="btn-ghost">View Curriculum</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num" data-target="200">0</span><span class="stat-suffix">+</span>
+        <span class="stat-label">Lessons</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num" data-target="12">0</span>
+        <span class="stat-label">Modules</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num" data-target="50">0</span><span class="stat-suffix">+</span>
+        <span class="stat-label">Projects</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span>
+        <span class="stat-label">Free</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-code-preview">
+    <div class="code-window">
+      <div class="code-window-bar">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+        <span class="window-title">hello_world.cpp</span>
+      </div>
+      <pre class="code-display"><code id="heroCode"></code></pre>
+    </div>
+  </div>
+  <div class="hero-scroll-indicator">
+    <span>Scroll to explore</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ FEATURES ═══ -->
+<section class="features-section">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-card" data-delay="0">
+        <div class="feature-icon">🎯</div>
+        <h3>Structured Path</h3>
+        <p>Carefully curated path from absolute beginner to systems programmer. No gaps, no fluff.</p>
+      </div>
+      <div class="feature-card" data-delay="100">
+        <div class="feature-icon">⚡</div>
+        <h3>Live Sandbox</h3>
+        <p>Write and run C++ code directly in the browser. See output instantly without any setup.</p>
+      </div>
+      <div class="feature-card" data-delay="200">
+        <div class="feature-icon">🧠</div>
+        <h3>Deep Explanations</h3>
+        <p>Every concept explained intuitively with visuals, analogies, and real-world use cases.</p>
+      </div>
+      <div class="feature-card" data-delay="300">
+        <div class="feature-icon">🏆</div>
+        <h3>Challenges &amp; Quizzes</h3>
+        <p>Test your knowledge after every module with coding challenges and interactive quizzes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════ CURRICULUM ═══ -->
+<section class="curriculum-section" id="curriculum">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Full Curriculum</span>
+      <h2>From <span class="gradient-text">Hello World</span> to System Architect</h2>
+      <p>12 modules covering every C++ concept — from variables to template metaprogramming.</p>
+    </div>
+    <div class="curriculum-grid" id="curriculumGrid">
+      <!-- Generated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ LESSONS ═══ -->
+<section class="lessons-section" id="lessons">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Interactive Lessons</span>
+      <h2>Learn by <span class="gradient-text">Doing</span></h2>
+      <p>Select a topic and dive into rich explanations with live code examples.</p>
+    </div>
+    <div class="lessons-layout">
+      <aside class="lessons-sidebar" id="lessonsSidebar">
+        <!-- Generated by JS -->
+      </aside>
+      <main class="lesson-content" id="lessonContent">
+        <!-- Generated by JS -->
+      </main>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ PLAYGROUND ═══ -->
+<section class="playground-section" id="playground">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Code Playground</span>
+      <h2>Write C++ in Your <span class="gradient-text">Browser</span></h2>
+      <p>Experiment with C++ code snippets. Pick a template or write from scratch.</p>
+    </div>
+    <div class="playground-layout">
+      <div class="playground-left">
+        <div class="playground-toolbar">
+          <div class="toolbar-left">
+            <select id="codeTemplate" class="template-select">
+              <option value="hello">Hello World</option>
+              <option value="variables">Variables &amp; Types</option>
+              <option value="loops">Loops</option>
+              <option value="functions">Functions</option>
+              <option value="arrays">Arrays</option>
+              <option value="pointers">Pointers</option>
+              <option value="classes">Classes &amp; OOP</option>
+              <option value="stl">STL Vectors</option>
+              <option value="templates">Templates</option>
+              <option value="sorting">Sorting Algorithm</option>
+            </select>
+          </div>
+          <div class="toolbar-right">
+            <button class="btn-icon" id="copyBtn" title="Copy code">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            </button>
+            <button class="btn-icon" id="clearBtn" title="Clear code">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg>
+            </button>
+            <button class="btn-run" id="runBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Run Code
+            </button>
+          </div>
+        </div>
+        <div class="code-editor-wrap">
+          <textarea class="code-editor" id="codeEditor" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"></textarea>
+          <div class="editor-line-nums" id="lineNums"></div>
+        </div>
+      </div>
+      <div class="playground-right">
+        <div class="output-header">
+          <span>Output</span>
+          <button class="btn-icon" id="clearOutputBtn" title="Clear output">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <div class="output-area" id="outputArea">
+          <div class="output-placeholder">
+            <div class="output-placeholder-icon">▶</div>
+            <p>Click <strong>Run Code</strong> to see output</p>
+            <p class="output-note">Note: Code runs in a simulated C++ environment</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ QUIZ ═══ -->
+<section class="quiz-section" id="quiz">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Test Your Knowledge</span>
+      <h2>Quick <span class="gradient-text">Quiz</span></h2>
+      <p>Challenge yourself with these C++ questions.</p>
+    </div>
+    <div class="quiz-container" id="quizContainer">
+      <!-- Generated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════ RESOURCES ═══ -->
+<section class="resources-section" id="resources">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Extra Resources</span>
+      <h2>Go <span class="gradient-text">Deeper</span></h2>
+      <p>Handpicked books, docs, and tools every C++ developer should know.</p>
+    </div>
+    <div class="resources-grid">
+      <div class="resource-card">
+        <div class="resource-icon">📚</div>
+        <div class="resource-content">
+          <h3>The C++ Programming Language</h3>
+          <p>By Bjarne Stroustrup — the definitive C++ book by the language creator himself.</p>
+          <span class="resource-tag">Book</span>
+        </div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">🌐</div>
+        <div class="resource-content">
+          <h3>cppreference.com</h3>
+          <p>The most complete and accurate C++ reference documentation available online.</p>
+          <span class="resource-tag">Documentation</span>
+        </div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">🛠️</div>
+        <div class="resource-content">
+          <h3>Compiler Explorer</h3>
+          <p>See how your C++ code compiles to assembly. Invaluable for performance work.</p>
+          <span class="resource-tag">Tool</span>
+        </div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">💡</div>
+        <div class="resource-content">
+          <h3>C++ Core Guidelines</h3>
+          <p>Official best practices and modern idioms maintained by Stroustrup &amp; Sutter.</p>
+          <span class="resource-tag">Guidelines</span>
+        </div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">🎮</div>
+        <div class="resource-content">
+          <h3>Exercism C++ Track</h3>
+          <p>Practice with 100+ exercises and get mentored feedback from experienced developers.</p>
+          <span class="resource-tag">Practice</span>
+        </div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">📹</div>
+        <div class="resource-content">
+          <h3>CppCon Talks</h3>
+          <p>Annual C++ conference talks — deep dives into language features and best practices.</p>
+          <span class="resource-tag">Videos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">C++<span class="logo-accent">Mastery</span></span>
+        </a>
+        <p>The free, open C++ learning platform for the next generation of systems programmers.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <a href="#curriculum">Curriculum</a>
+          <a href="#lessons">Lessons</a>
+          <a href="#playground">Playground</a>
+          <a href="#quiz">Quiz</a>
+        </div>
+        <div class="footer-col">
+          <h4>Topics</h4>
+          <a href="#lessons">Basics</a>
+          <a href="#lessons">OOP</a>
+          <a href="#lessons">STL</a>
+          <a href="#lessons">Advanced</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with ❤️ for C++ learners worldwide &nbsp;·&nbsp; Completely free, forever.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script src="app.js"></script>
+</body>
+</html>
